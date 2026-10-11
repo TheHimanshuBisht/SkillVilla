@@ -8,7 +8,7 @@ import Settings from "./pages/Settings";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import CourseDetails from "./pages/CourseDetails";
-
+import Lesson from "./pages/Lesson";
 function App() {
   return (
     <Routes>
@@ -16,6 +16,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/courses/:id" element={<CourseDetails />} />
+      <Route path="/lessons/:id" element={<Lesson />} />
       <Route
         element={
           <ProtectedRoute>

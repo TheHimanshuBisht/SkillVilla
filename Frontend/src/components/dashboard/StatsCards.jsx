@@ -1,9 +1,32 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 function StatsCards() {
+  const [progress, setProgress] = useState(null);
+
+  useEffect(() => {
+    const fetchProgress = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const offset = new Date().getTimezoneOffset();
+        const res = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/progress?tzOffset=${offset}`,
+          { headers: { Authorization: `Bearer ${token}` } }
+        );
+        setProgress(res.data);
+      } catch (err) {
+        setProgress(null);
+      }
+    };
+
+    fetchProgress();
+  }, []);
+
   const stats = [
-    { label: "Courses Enrolled", value: 4, icon: "📚" },
-    { label: "Lessons Completed", value: 28, icon: "✅" },
-    { label: "Day Streak", value: 7, icon: "🔥" },
-    { label: "Overall Progress", value: "62%", icon: "📈" },
+    { label: "Courses Started", value: progress ? progress.coursesStarted : 0, icon: "📚" },
+    { label: "Lessons Completed", value: progress ? progress.totalCompleted : 0, icon: "✅" },
+    { label: "Day Streak", value: progress ? progress.streak : 0, icon: "🔥" },
+    { label: "Overall Progress", value: `${progress ? progress.overallPercent : 0}%`, icon: "📈" },
   ];
 
   return (
