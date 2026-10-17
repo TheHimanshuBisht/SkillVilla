@@ -26,8 +26,7 @@ function StatsCards() {
     { label: "Courses Started", value: progress ? progress.coursesStarted : 0, icon: "📚" },
     { label: "Lessons Completed", value: progress ? progress.totalCompleted : 0, icon: "✅" },
     { label: "Day Streak", value: progress ? progress.streak : 0, icon: "🔥" },
-    { label: "Overall Progress", value: `${progress ? progress.overallPercent : 0}%`, icon: "📈" },
-  ];
+    { label: "Course Progress", value: `${progress ? progress.overallPercent : 0}%`, icon: "📈" },  ];
 
   return (
     <div className="stats-grid">

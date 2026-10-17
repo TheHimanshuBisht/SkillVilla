@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import AskMe from "./AskMe";
 import "../../styles/dashboard.css";
 
 function DashboardLayout() {
@@ -43,9 +44,11 @@ function DashboardLayout() {
         <Topbar user={user} />
 
         <div className="dashboard-content">
-          <Outlet context={{ user }} />
+          <Outlet context={{ user, setUser }} />
         </div>
       </main>
+
+      <AskMe />
     </div>
   );
 }

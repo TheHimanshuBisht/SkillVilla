@@ -3,6 +3,9 @@ import { useLocation } from "react-router-dom";
 const titles = {
   "/dashboard": "Dashboard",
   "/my-learning": "My Learning",
+  "/aptitude": "Aptitude Practice",
+  "/mock-tests": "Mock Tests",
+  "/sentence-checker": "Grammar Assistant",
   "/progress": "Progress",
   "/settings": "Settings",
 };

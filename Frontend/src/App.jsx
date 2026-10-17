@@ -9,6 +9,10 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import CourseDetails from "./pages/CourseDetails";
 import Lesson from "./pages/Lesson";
+import Aptitude from "./pages/Aptitude";
+import MockTests from "./pages/MockTests";
+import SentenceChecker from "./pages/SentenceChecker";
+
 function App() {
   return (
     <Routes>
@@ -27,6 +31,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/my-learning" element={<MyLearning />} />
         <Route path="/progress" element={<Progress />} />
+        <Route path="/aptitude" element={<Aptitude />} />
+        <Route path="/mock-tests" element={<MockTests />} />
+        <Route path="/sentence-checker" element={<SentenceChecker />} />
         <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
