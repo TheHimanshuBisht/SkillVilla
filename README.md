@@ -167,6 +167,28 @@ Base URL: `/api`. Every route except signup and login needs the header `Authoriz
 4. **Aptitude and mock tests:** questions are sent without answers. The server checks the answers, so correct answers are never exposed to the browser.
 5. **Insights:** every saved answer feeds a per-topic accuracy count, and plain rules turn it into a remark.
 
+
+## Screenshots
+
+### Login
+![Login page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Lesson
+![Lesson page](screenshots/lesson.png)
+
+### Aptitude Practice
+![Aptitude practice](screenshots/aptitude.png)
+
+### Mock Test
+![Mock test](screenshots/mock-test.png)
+
+### Progress
+![Progress page](screenshots/progress.png)
+
+
 ## Security Practices
 
 - Passwords are hashed with bcrypt and hidden from queries by default
