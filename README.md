@@ -197,6 +197,7 @@ Base URL: `/api`. Every route except signup and login needs the header `Authoriz
 - CORS only allows the deployed Frontend and local development
 - Secrets live in environment variables and are never committed
 - The Grammar Assistant needs login, limits each sentence to 300 characters and each user to 15 checks a day
+- Rate limiting on login (10 failed attempts per 15 minutes), signup and the whole API
 
 ## Author
 
